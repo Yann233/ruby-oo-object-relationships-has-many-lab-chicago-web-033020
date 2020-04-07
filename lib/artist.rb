@@ -1,6 +1,7 @@
 #An artist should have many songs
 class Artist
   attr_accessor :name
+<<<<<<< HEAD
 
   @@all=[]
 
@@ -31,4 +32,33 @@ class Artist
   def self.song_count
     Song.all.length
   end
+=======
+  @@all=[]
+
+  def initialize(name)
+    @@all<<self
+  end
+
+  def self.all
+  @@all
+  end
+
+  def songs
+    Song.all.select{|song| song.artist == self}
+  end
+
+#create a new song to associate the objects
+  def add_song_by_name(name)
+    song = Song.new(name)
+    song.artist = self
+  end
+
+  def self.song_count
+    Song.all.length
+  end
+
+end
+
+
+>>>>>>> 26b413101bd7eac2662820a4aa23a70d99e7e110
 end

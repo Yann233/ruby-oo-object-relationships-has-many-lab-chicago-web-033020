@@ -1,4 +1,5 @@
 #A post should belong to an author.
+<<<<<<< HEAD
 class Post
   attr_accessor :author, :title
   @@all = []
@@ -22,3 +23,5 @@ class Post
   #  end
   end
 end
+=======
+>>>>>>> 26b413101bd7eac2662820a4aa23a70d99e7e110
